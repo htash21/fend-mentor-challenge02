@@ -4,7 +4,7 @@
 }
 
 :root {
-    
+    --card-color: hsl(228.95, 55.88%, 26.67%);
     --pale-blue: hsl(243, 100%, 93%);
     --grayish-blue: hsl(229, 7%, 55%);
     --dark-blue: hsl(228, 56%, 26%);
@@ -15,7 +15,58 @@
 body {
     font-family: 'Raleway', sans-serif;
     background-image: url("/images/bg-mobile.png");
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
+/* 1st card */
+
+.card01 {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    box-sizing: border-box;
+    padding: 3rem;
+    background-color: var(--card-color);
+    height: 250px;
+    width: 330px;
+    border-radius: 10px 100px 10px 10px;
+}
+
+.card01 div:first-child {
+    margin-bottom: 2rem;
+}
+
+.icons {
+    position: relative;
+    left: -5px;
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+}
+
+.icons a {
+    background-color: var(--very-dark-blue);
+    width: 25px;
+    padding: 15px;
+    border-radius: 10px;
+    margin-right: 10px;
+    transition: background-color .2s ease;
+}
+
+.icons a:hover {
+    background-color: var(--pale-blue);
+}
+
+/* 2nd card */
+
+
+
+/* attribute */
 
 footer {
     position: absolute;
