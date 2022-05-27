@@ -22,7 +22,14 @@ body {
 }
 
 .card {
-    margin: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.cards {
+    margin-bottom: 1.5rem;
 }
 
 /* 1st card */
@@ -181,6 +188,7 @@ body {
     height: 60px;
     width: 150px;
     border-radius: 10px;
+    cursor: default;
     transition: all .4s ease;
 }
 
@@ -214,4 +222,73 @@ footer {
 
 footer a { 
     color: hsl(227, 41%, 67%); 
+}
+
+@media only screen and (min-width: 1360px) {
+    .card {
+        flex-flow: row wrap;
+        align-items: flex-end;
+    }
+
+    .cards {
+        justify-content: flex-end;
+    }
+
+    .cards:first-child {
+        margin-right: 2rem;
+        margin-bottom: 0;
+    }
+
+    .card02 {
+        width: 600px;
+        height: 90px;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 3rem;
+        padding-bottom: 2rem;
+        margin: 0;
+    }
+
+    .s-bar {
+        width: 600px;
+    }
+
+    @keyframes s-bar {
+        0% {
+            width: 0;
+        }
+
+        100% {
+            width: 489px;
+        }
+    }
+
+    .used-s-bar:hover .s-circle {
+        right: 96.8%;
+    }
+
+    .s-numbers p{
+        margin: 0;
+    }
+
+    .left-s {
+        top: -40px;
+        right: 30px;
+    }
+
+    .left-s::after {
+        position: absolute;
+        content: '';
+        bottom: -20px;
+        right: 0;
+        border-style: solid;
+        border-color: transparent #ffffff transparent transparent;
+        border-width: 20px 20px 20px 0;
+        transition: all .4s ease;
+    }
+
+    .left-s:hover::after {
+        border-color: transparent var(--very-dark-blue) transparent transparent;
+    }
+
 }
