@@ -14,7 +14,7 @@
 
 body {
     font-family: 'Raleway', sans-serif;
-    background: url("/images/bg-mobile.png");
+    background: url(../images/bg-mobile.png) repeat 0 0;
     height: 100vh;
     display: flex;
     justify-content: center;
@@ -140,7 +140,7 @@ body {
     }
 
     100% {
-        width: 220px;
+        width: 81.5%;
     }
 }
 
@@ -224,11 +224,16 @@ footer a {
     color: hsl(227, 41%, 67%); 
 }
 
+@media only screen and (min-width: 362px) {
+    body {
+        background: url(../images/bg-desktop.png) repeat center center;
+        background-size: 200%;
+    }
+}
+
+
 @media only screen and (min-width: 1360px) {
 
-    body {
-        background: url(/images/bg-desktop.png);
-    }
     .card {
         flex-flow: row wrap;
         align-items: flex-end;
@@ -263,7 +268,7 @@ footer a {
         }
 
         100% {
-            width: 489px;
+            width: 81.5%;
         }
     }
 
